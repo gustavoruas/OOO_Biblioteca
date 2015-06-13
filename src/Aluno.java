@@ -20,4 +20,9 @@ public class Aluno {
 		
 	}
 
+	public void renovaEmprestimo() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -23,6 +23,18 @@ public class Livro {
 		
 	}
 	
+	public void EmprestarPara(Aluno aluno) {
+		emprestado = true;
+		/*
+		Emprestimo emprestimo = new Emprestimo();		
+		aluno.AdicionarEmprestimo(emprestimo);
+		*/
+	}
+	
+	public boolean EstaEmprestado() {
+		return emprestado;
+	}
+	
 	
 	public String getISBN() {
 		return ISBN;
@@ -90,19 +102,5 @@ public class Livro {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	
-	public void EmprestarPara(Aluno aluno) {
-		emprestado = true;
-		
-		Emprestimo emprestimo = new Emprestimo();
-		
-		aluno.AdicionarEmprestimo(emprestimo);		
-	}
-	public boolean EstaEmprestado() {
-		return emprestado;
-	}
-	
-	
-	
 	
 }

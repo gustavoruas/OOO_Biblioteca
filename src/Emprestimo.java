@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -8,8 +9,22 @@ public class Emprestimo {
 	
 	
 	
+	
 	public void para(Aluno aluno) {
 		
+		//***define datas de emprestimo
+		//***cria um empréstimo com essa data, para o aluno solicitado
+		Calendar cal = Calendar.getInstance();
+		Emprestimo emp = new Emprestimo();	
+		
+		emp.setData_inicio(cal.getTime());
+				
+		cal.add(Calendar.DATE, 7);
+		
+		emp.setData_fim(cal.getTime());
+		//******************************
+				
+		aluno.AdicionarEmprestimo(emp);
 		
 	}
 

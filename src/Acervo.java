@@ -10,7 +10,7 @@ public class Acervo {
 	}
 	
 	
-	public void Adicionar(Livro novoLivro) {		
+	public void adicionar(Livro novoLivro) {		
 		Livros.add(novoLivro);		
 	}
 
