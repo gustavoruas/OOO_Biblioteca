@@ -56,7 +56,7 @@ public class bilioteca {
 		Acervo acervo = new Acervo();
 		
 		acervo.adicionar(novoLivro);
-		
+				
 		Aluno alu = new Aluno();
 		Bibliotecario biblio = new Bibliotecario();
 		
