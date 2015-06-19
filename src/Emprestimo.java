@@ -6,8 +6,11 @@ public class Emprestimo {
 	
 	private Date data_inicio;
 	private Date data_fim;
+	private Livro livro;
 	
-	
+	public Emprestimo(Livro livro){
+		this.setLivro(livro);
+	}
 	
 	
 	public void para(Aluno aluno) {
@@ -50,6 +53,18 @@ public class Emprestimo {
 
 	public void setData_inicio(Date data_inicio) {
 		this.data_inicio = data_inicio;
+	}
+
+
+
+	public Livro getLivro() {
+		return livro;
+	}
+
+
+
+	public void setLivro(Livro livro) {
+		this.livro = livro;
 	}
 		
 	
