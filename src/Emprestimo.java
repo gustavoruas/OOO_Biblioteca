@@ -1,4 +1,3 @@
-import java.util.Calendar;
 import java.util.Date;
 
 
@@ -7,27 +6,17 @@ public class Emprestimo {
 	private Date data_inicio;
 	private Date data_fim;
 	private Livro livro;
+	private Aluno aluno;
 	
-	public Emprestimo(Livro livro){
+	public Emprestimo(Livro livro, Date data_inicio, Date data_fim){
 		this.setLivro(livro);
+		this.setData_inicio(data_inicio);
 	}
 	
 	
 	public void para(Aluno aluno) {
-		
-		//***define datas de emprestimo
-		//***cria um empréstimo com essa data, para o aluno solicitado
-		Calendar cal = Calendar.getInstance();
-		Emprestimo emp = new Emprestimo();	
-		
-		emp.setData_inicio(cal.getTime());
-				
-		cal.add(Calendar.DATE, 7);
-		
-		emp.setData_fim(cal.getTime());
-		//******************************
-				
-		aluno.AdicionarEmprestimo(emp);
+									
+		setAluno(aluno);
 		
 	}
 
@@ -65,6 +54,16 @@ public class Emprestimo {
 
 	public void setLivro(Livro livro) {
 		this.livro = livro;
+	}
+
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
 	}
 		
 	
