@@ -1,6 +1,9 @@
 import static org.junit.Assert.*;
-import org.mockito.*;
 
+import java.awt.List;
+
+import org.mockito.Spy;
+import static org.mockito.Mockito.*;
 import org.junit.Test;
 
 
@@ -70,6 +73,21 @@ public class bilioteca {
 		assertEquals(1, alu.QuantidadeEmpestimo());
 		
 	}
+	
+	@Test
+	//Test with Mock
+	public void deveCadastrarMilLivors(){
+		Acervo acervo = new Acervo();
+		
+		Acervo acervSpy = spy(acervo);
+		
+		when(acervSpy.QuantidadeLivro()).thenReturn(1000);
+		assertEquals(0, acervo.QuantidadeLivro());
+		assertEquals(1000, acervSpy.QuantidadeLivro());
+		
+		
+	}
+
 			
 
 }
